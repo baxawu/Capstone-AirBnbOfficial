@@ -1,0 +1,32 @@
+
+.placeCard{
+    
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 8px;
+    text-decoration: none;
+    .wrapImg{
+        --img-height: 42px;
+        flex: 1 1;
+        height: 100%;
+        margin-right: 10px;
+        img{
+            border-radius: 6px;
+            height: var(--img-height);
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+        }
+    }
+}
+
+.placeCardContent{
+    flex: 3 1;
+    .title{
+        color: black;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

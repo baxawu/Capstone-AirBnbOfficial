@@ -1,0 +1,19 @@
+.wrap{
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 30px;
+    width: 100%;
+
+    .wrap__header{
+        display: flex;
+        justify-content:space-between;
+
+        .wrap__search{
+
+        }
+    }
+    .wrap__content{
+
+    }
+}
