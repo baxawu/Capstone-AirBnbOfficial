@@ -81,14 +81,14 @@ export default function BasicMenu() {
               variant="h3"
               sx={{ fontSize: 20, fontWeight: 500, padding: 2 }}
             >
-              {currentUser?.user?.name} {/* Display the user's name */}
+              Tài Khoản: {currentUser?.user?.name} {/* Display the user's name */}
             </Typography>
             {currentUser?.user?.role === "USER" ? (
               <Typography
                 variant="h3"
                 sx={{ fontSize: 20, fontWeight: 500, padding: 2 }}
               >
-                <a href="http://localhost:3001">Chuyển sang trang admin</a>
+                <a href="https://admin-airbnb.vercel.app/admin">Chuyển sang trang admin</a>
               </Typography>
             ) : (
               <></>

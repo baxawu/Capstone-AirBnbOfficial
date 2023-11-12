@@ -5,6 +5,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { convertTime } from '../../utils/utils';
+import style from './DateSpickerCom.module.scss'
 export default function DatePickerValue(props) {
   const [value, setValue] = React.useState(dayjs('2022-04-17'));
 
@@ -21,7 +22,8 @@ const handleDateChange = (newValue,newValue1) => {
     <LocalizationProvider dateAdapter={AdapterDayjs} >
       <DemoContainer components={['DatePicker']}>
         <DatePicker
-        label="Chọn ngày"
+        className={style.date}
+        label={props.label}
           value={value}
           onChange={(newValue) => handleDateChange(newValue)}
         />

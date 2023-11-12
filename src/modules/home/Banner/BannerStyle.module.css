@@ -99,6 +99,9 @@
 .jss1::after {
   border-bottom: 2px solid #fb4226 !important;
 }
+.jss1:focus {
+  border: none;
+}
 
 .jss2 {
   left: 50%;

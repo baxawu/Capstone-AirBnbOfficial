@@ -1,7 +1,5 @@
 import React from 'react'
 import style from './SearchRecent.module.scss'
-import  Grid  from '@mui/material/Grid'
-import Box from '@mui/material/Box';
 import { useNavigate } from 'react-router-dom';
 
 export default function SearchRecent({ linklImg, title,id }) {

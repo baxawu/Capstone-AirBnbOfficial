@@ -1,0 +1,39 @@
+.wrapperModal {
+  align-items: center;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 14px;
+}
+
+.jss1 {
+  height: 100%;
+  padding: 20px;
+  font-weight: 500 !important;
+  justify-content: space-around;
+}
+.jss1::before {
+  right: 0px !important;
+  width: 1px;
+  height: 60%;
+  background-color: #eeeeee;
+  bottom: 12px !important;
+}
+.jss1:hover::before {
+  border-bottom: none !important;
+}
+.jss1::after {
+  border-bottom: 2px solid #fb4226 !important;
+}
+.jss1:focus {
+  border: none !important;
+}
+
+.jss5 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+}/*# sourceMappingURL=modalcomp.module.css.map */

@@ -13,6 +13,8 @@
   --theme: #ff385c;
   --light-grey: #f7f7f7;
   --white-blind: #ffffffbe;
+  --border-card: 18px;
+  --primary: #ff385c;
 }
 
 body {

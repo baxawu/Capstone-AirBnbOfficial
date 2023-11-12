@@ -18,8 +18,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path="details/:detailsid" element={<ProductDetails />} />
           
-            <Route element={<ProtectedRoute />}>
             <Route path="room-details/:detailsid" element={<BookingDetals />} />
+            <Route element={<ProtectedRoute />}>
         
 
             </Route>

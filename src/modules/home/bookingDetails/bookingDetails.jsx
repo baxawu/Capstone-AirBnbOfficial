@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 import { useMutation, useQuery } from '@tanstack/react-query'; // Fix the import statement
 import { useParams } from 'react-router-dom';
@@ -35,28 +35,45 @@ export default function BookingDetails() { // Rename the component to start with
     queryFn: () => getComment(detailsid),
   });
 
-console.log('getComent',getComent);
 
   const mutationDatphong = useMutation({
+   
     mutationFn: (newTodo) => {
       return (
         datPhong(newTodo)
       )
     },
-  })
-  if (mutationDatphong.isSuccess) {
+   
+  
+  }
+  
+  )
+  const checkBTN =()=>{
+    if (!timein) {
+      Swal.fire("Bạn chưa chọn ngày đến ", "Vui lòng chọn ngày đến!");
+      return;
+    } else if (!timeout) {
+      Swal.fire("Bạn chưa chọn ngày đi", "Vui lòng chọn ngày đi!");
+      return;
+    } else if (!songuoi) {
+      Swal.fire("Bạn chưa chọn số lượng", "Vui lòng chọn số lượng!");
+      return;
+    }
+  }
+
+ useEffect(()=>{
+  if (mutationDatphong?.isSuccess) {
     Swal.fire('Thành công!')
 
   }
-  if (mutationDatphong.isError) {
+  if (mutationDatphong?.isError) {
     Swal.fire('Lỗi!')
 
   }
-
-
+ },[mutationDatphong?.isSuccess,mutationDatphong?.isError])
 
   return (
-    <Grid container spacing={6} maxWidth={1200} margin={'0 auto' }>
+    <Grid container spacing={6} maxWidth={1200} margin={'0 auto'}>
       <div>
         <h3 className={style.PageTitle}>{products.tenPhong}</h3>
         <div className={style.wrapImg}>
@@ -88,9 +105,9 @@ console.log('getComent',getComent);
               <Box>
                 <div>
                   <h2>VND</h2><p>/day</p>
-                  <div style={{ display: 'flex', gap: 4 }}>
-                    <DatePickerComp setTime={setTimeIn} />
-                    <DatePickerComp setTime={setTimeOut} />
+                  <div style={{ display: 'flex', gap: 4}}>
+                    <DatePickerComp setTime={setTimeIn} label={"check in"} />
+                    <DatePickerComp setTime={setTimeOut}  label={"check out"}/>
                   </div>
                   <div>
                     <ModalComponent songuoi={songuoi}>

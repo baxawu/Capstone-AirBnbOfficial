@@ -7,7 +7,7 @@ import { Container } from "@mui/system";
 import { Circle } from "@mui/icons-material";
 
 //others
-import "./FooterStyle.module.scss";
+import "./FooterStyle.scss"
 import { footerCategories, footerRightList, userTools, socialList } from "./data";
 
 function Footer() {
@@ -72,7 +72,7 @@ function Footer() {
                         <Grid item sm={6} md={6} className="main-footer__right-list">
                             <Grid container>
                                 <Grid item xs={12} sm={4} md={3} component="p" className="main-footer__right-item">
-                                    © 2022 Airbnb, Inc.
+                                    © 2023 Airbnb, Inc.
                                 </Grid>
                                 {renderFooterRights()}
                             </Grid>
