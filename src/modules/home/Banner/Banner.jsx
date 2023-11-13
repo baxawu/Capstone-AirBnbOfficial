@@ -80,7 +80,7 @@ export default function Banner() {
       Swal.fire("Bạn chưa chọn số lượng", "Vui lòng chọn số lượng!");
       return;
     }
-    navigate(`/details/${locationName}`);
+    navigate(`/details/${locationName}`)
   };
   //setup slider
   const slider = useRef();
@@ -170,7 +170,7 @@ export default function Banner() {
             </div>
           </Grid>
           <Grid item xs={2}>
-            <div style={{ height: "100%" }}>
+            <div style={{ height: "100%"}}>
               <FormControl className={style.jss5}>
                 <input
                   className={style.jss1}
