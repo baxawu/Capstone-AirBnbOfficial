@@ -103,7 +103,7 @@
         border-bottom: 2px solid #fb4226 !important
     }
     &:focus{
-        border: none;
+        border: none !important;
     }
     
 }
@@ -140,6 +140,9 @@
     height: 100%;
     position: relative;
     justify-content: center;
+    &:focus{
+        border: none !important;
+    }
 }
 .jss6{
     &:hover{

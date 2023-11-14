@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Grid } from '@mui/material';
 import { maxGuest, minGuest, settings,calculateTotalGuest } from './constan'; // Fixed the import path
+import style from "./stylesFormControl.module.scss"
+import { WidthFull } from '@mui/icons-material';
 
 export default function FormControl({ onHandleTotalGuest,shareGuest }) {
   const [guestNumber, setGuestNumber] = useState({
@@ -14,19 +16,17 @@ export default function FormControl({ onHandleTotalGuest,shareGuest }) {
   return (
     <div>
       {settings.map((item, index) => {
-       
-     console.log(item);
         return (
           
           <Grid container key={index}>
             <Grid item xs={8} sx={{ display: 'flex' }}>
-              <div>
-                <p>{item.inputName}</p>
-                <p>{item.subText}</p>
+              <div className={style.jss1}>
+                <p >{item.inputName}</p>
+                <p >{item.subText}</p>
               </div>
             </Grid>
-            <Grid item xs={4}>
-              <button
+            <Grid item xs={4} className={style.jss3}> 
+              <button className={style.jss2}
                 onClick={() => {
                   const totalGuest = onHandleTotalGuest(guestNumber);
 
@@ -42,7 +42,7 @@ export default function FormControl({ onHandleTotalGuest,shareGuest }) {
                 -
               </button>{' '}
         {guestNumber[item.inputName]}{' '}
-              <button
+              <button className={style.jss2}
                 onClick={() => {
                   const totalGuest = onHandleTotalGuest(guestNumber);
 

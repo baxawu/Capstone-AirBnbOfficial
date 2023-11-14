@@ -21,7 +21,7 @@ export default function ModalComponent({children,songuoi}) {
   return (
 <div className={style.jss1}>
 <Button className={style.jss5} aria-describedby={id} variant="contained" onClick={handleClick}>
-  {songuoi}Khách
+  Khách: {songuoi}
 </Button>
 <Popover
   id={id}

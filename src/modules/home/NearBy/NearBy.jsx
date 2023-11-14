@@ -48,7 +48,7 @@ export default function NearBy() {
             <div className={style.wrapImg}>
               <a href="/details/3">
                 <img
-                  src="https://airbnb-five-sandy.vercel.app/static/media/entire-place.232c8ac832fcad480fee.webp"
+                  src="https://airbnb-five-sandy.vercel.app/static/media/modern-place.abd5e237dff2aa3fc93c.webp"
                   alt="stay"
                 />
               </a>
@@ -58,7 +58,7 @@ export default function NearBy() {
             <div className={style.wrapImg}>
               <a href="/details/889">
                 <img
-                  src="https://airbnb-five-sandy.vercel.app/static/media/entire-place.232c8ac832fcad480fee.webp"
+                  src="https://airbnb-five-sandy.vercel.app/static/media/natural-place.9184e6638e8f7705ba43.webp"
                   alt="stay"
                 />
               </a>

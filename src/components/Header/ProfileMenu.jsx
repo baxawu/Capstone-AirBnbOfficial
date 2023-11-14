@@ -88,7 +88,7 @@ export default function BasicMenu() {
                 variant="h3"
                 sx={{ fontSize: 20, fontWeight: 500, padding: 2 }}
               >
-                <a href="https://admin-airbnb.vercel.app/admin">Chuyển sang trang admin</a>
+                <a className={style.jss6} href="https://admin-airbnb.vercel.app/admin">Chuyển sang trang Admin</a>
               </Typography>
             ) : (
               <></>
