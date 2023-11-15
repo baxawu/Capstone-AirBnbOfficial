@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import { useMutation, useQuery } from "@tanstack/react-query"; // Fix the import statement
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+
 import { datPhong, getDetails, getphong } from "../../../apis/productAPI";
 import { Box } from "@mui/material";
 import style from "./bookingDetails.module.scss";
@@ -19,6 +20,7 @@ import { getComment } from "../../../apis/commentAPI";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 export default function BookingDetails() {
+  const history = useNavigate()
   // Rename the component to start with an uppercase letter
   const { currentUser, handleSignout } = useUserContext();
   const idnguoidung = currentUser?.user?.id;
@@ -56,6 +58,13 @@ export default function BookingDetails() {
       return;
     }
   };
+  useEffect(()=>{
+    console.log(currentUser);
+    if (!currentUser){
+      Swal.fire("Vui lòng đăng nhập trước khi đặt phòng!");
+  history('/sign-in');
+    }
+  },[currentUser])
 
   useEffect(() => {
     if (mutationDatphong?.isSuccess) {
