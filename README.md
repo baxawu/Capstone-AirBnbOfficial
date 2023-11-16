@@ -1,4 +1,4 @@
-Tên nhóm: Lê Nhựt Phi và Phạm Nguyễn Anh Kiệt
+Tên nhóm: Lê Nhựt Phi (MainPage) và Phạm Nguyễn Anh Kiệt (Admin Page)
 
 Link Admin Pages: https://github.com/baxawu/Admin_airbnb
 
