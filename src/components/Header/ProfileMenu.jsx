@@ -104,12 +104,12 @@ export default function BasicMenu() {
           <>
             <MenuItem className={style.menuItems} onClick={handleClose}>
               <a href="/sign-up" className={style.text}>
-                Sign Up
+                Đăng Kí
               </a>
             </MenuItem>
             <MenuItem onClick={handleClose} className={style.menuItems}>
               <a href="/sign-in" className={style.text}>
-                Log In
+                Đăng nhập
               </a>
             </MenuItem>
           </>
